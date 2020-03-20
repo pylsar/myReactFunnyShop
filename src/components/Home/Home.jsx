@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -6,7 +7,7 @@ const Home = () => {
            <h1>Магазин крутых вещей</h1>
            <p>тут можно купить все(это вам не али экспресс какой-нибудь)</p> 
            <p>
-               <a href="#">Каталог тут</a>
+               <Link to="/products">Каталог тут</Link>
            </p>
         </div>
     )
