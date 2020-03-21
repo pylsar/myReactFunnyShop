@@ -13,8 +13,8 @@ function App() {
       <main className="container">
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="*" component={Error404} />
           <Route path="/products" component={Products} />
+          <Route path="*" component={Error404} />
         </Switch>
       </main>
     </div>
