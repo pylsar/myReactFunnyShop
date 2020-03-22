@@ -1,7 +1,8 @@
 import React from 'react'
-import axios from 'axios'
 
 import isLoadingIcon from '../../assets/img/isLoading.png'  
+import ProductItem from '../../components/ProductItem/ProductItem'
+import { getAllProducts} from '../../API'
 
 class Products extends React.Component {
 
@@ -11,15 +12,14 @@ class Products extends React.Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:3001/products')
-            .then(res => {
-                console.log(res.data)
+        getAllProducts()
+            .then(products => {
                 setTimeout(() => {
                     this.setState({
                         isLoading: false,
-                        products: res.data
+                        products: products
                     })
-                }, 1000)
+                },1000)
             })
     }
 
@@ -33,16 +33,9 @@ class Products extends React.Component {
                     <img src={isLoadingIcon} alt="wait"/> 
                 </div>
                 : 
-                this.state.products.map((product, index) => {
+                this.state.products.map((product) => {
                         return (
-                            <div key={index} className="product">
-                                <h3>{product.title}</h3>
-                                <div className="product__img">
-                                    <img src={require(`../../assets/img/${product.img}`)} alt={product.title}/>
-                                </div>
-                                <span>Цена: {product.price}</span>
-                                <span>Кол-во: {product.quantity}</span>
-                            </div>
+                            < ProductItem key={product.id} product={product}/>
                         )
                     })}
             </div>
