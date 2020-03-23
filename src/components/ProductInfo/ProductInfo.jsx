@@ -10,6 +10,7 @@ const ProductInfo = ({product}) => {
             <div className="product__img">
                 <img src={require(`../../assets/img/${product.img}`)} alt={product.title}/>
             </div>
+            <div>{product.longDescr}</div>
             <Link to='/products'>назад</Link>
         </div>
     )

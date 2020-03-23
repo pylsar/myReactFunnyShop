@@ -5,21 +5,24 @@
         "title": "Сандали с носками",
         "price": "999.99",
         "quantity": 20,
-        "img": "boots.jpg"
+        "img": "boots.jpg",
+        "longDescr": "gkjhghj jgjhgkj gjkgjkg hjgjkgjh "
     },
     {
         "id": 2,
         "title": "Б/У Телефон",
         "price": "1999.99",
         "quantity": 1,
-        "img": "phone.jpg"
+        "img": "phone.jpg",
+        "longDescr": "gkjhghj jgjhgkj gjkgjkg hjgjkgjh "
     },
     {
         "id": 3,
         "title": "Гарри Поттер на албанском языке",
         "price": "999.99",
         "quantity": 10,
-        "img": "potter.jpg"
+        "img": "potter.jpg",
+        "longDescr": "gkjhghj jgjhgkj gjkgjkg hjgjkgjh "
     }
 ]
 }
