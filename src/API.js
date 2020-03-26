@@ -9,3 +9,4 @@ export function getProduct(id){
     return fetch(`${API_URL}/${id}`)
     .then(res => res.json())
 }
+

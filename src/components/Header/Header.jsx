@@ -14,9 +14,6 @@ const Home = () => {
                     <li>
                         <Link to="/products">Каталог</Link>
                     </li>
-                    <li>
-                        <Link to="/products/create">Добавить</Link>
-                    </li>
                 </ul>
             </nav>
         </header>
