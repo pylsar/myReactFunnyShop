@@ -6,7 +6,7 @@
         "price": "999.99",
         "quantity": 20,
         "img": "boots.jpg",
-        "longDescr": "gkjhghj jgjhgkj gjkgjkg hjgjkgjh "
+        "longDescr": "Только у нас можно приобрести модные сандали, с пришитыми к ним носками."
     },
     {
         "id": 2,
@@ -14,7 +14,7 @@
         "price": "1999.99",
         "quantity": 1,
         "img": "phone.jpg",
-        "longDescr": "gkjhghj jgjhgkj gjkgjkg hjgjkgjh "
+        "longDescr": "Телефон в отличном состоянии, пользовались всего пару дней. продаем потому что не понравился цвет"
     },
     {
         "id": 3,
@@ -22,7 +22,7 @@
         "price": "999.99",
         "quantity": 10,
         "img": "potter.jpg",
-        "longDescr": "gkjhghj jgjhgkj gjkgjkg hjgjkgjh "
+        "longDescr": "отличная книга, но без картинок... поэтому и продаю"
     }
 ]
 }

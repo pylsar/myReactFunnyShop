@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react'
 
-// import ProductItem from '../../components/ProductItem/ProductItem'
 import ProductInfo from '../../components/ProductInfo/ProductInfo'
 import {getProduct} from '../../API'
  
@@ -33,7 +32,6 @@ class ViewProduct extends React.Component {
                     this.state.isLoading ?
                     <h2>Идет Загрузка товара</h2>:
                     <ProductInfo product={this.state.product}/>
-
                 }
           
             </Fragment>

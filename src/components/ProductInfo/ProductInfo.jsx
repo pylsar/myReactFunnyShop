@@ -1,17 +1,23 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Comment from '../../containers/Comment/Comment'
+
+import './ProductInfo.scss'
 
 const ProductInfo = ({product}) => {
     return (
-        <div>
-            <h3>{product.title}</h3>
-            <span>Цена: {product.price}</span>
-            <span>Кол-во: {product.quantity}</span>
-            <div className="product__img">
-                <img src={require(`../../assets/img/${product.img}`)} alt={product.title}/>
+        <div className="productInfo">
+            <div className="productInfo__left">
+                <h3>{product.title}</h3>
+                <div className="productInfo__left__img">
+                    <img src={require(`../../assets/img/${product.img}`)} alt={product.title}/>
+                </div>
+                <span>Цена: {product.price}</span>
+                <span>Кол-во: {product.quantity}</span>
+                <div className="productInfo__left__descr">{product.longDescr}</div>
+                <Link to='/products' className="productInfo__left--link">назад</Link>
             </div>
-            <div>{product.longDescr}</div>
-            <Link to='/products'>назад</Link>
+            <Comment />
         </div>
     )
 }
