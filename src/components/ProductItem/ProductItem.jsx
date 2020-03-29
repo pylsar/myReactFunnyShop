@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+import './ProductItem.scss'
+
 const ProductItem = ({product}) => {
     return (
         <div className="productItem">

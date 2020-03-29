@@ -4,6 +4,8 @@ import isLoadingIcon from '../../assets/img/isLoading.png'
 import ProductItem from '../../components/ProductItem/ProductItem'
 import { getAllProducts} from '../../API'
 
+import './Products.scss'
+
 class Products extends React.Component {
 
     state={
@@ -25,7 +27,7 @@ class Products extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="products">
                 <h1>Каталог Товаров</h1>
                 {this.state.isLoading ? 
                 <div>
