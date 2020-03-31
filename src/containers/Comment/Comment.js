@@ -4,11 +4,13 @@ import './Comment.scss'
 
 class Comment extends React.Component {
     state={
-        value: ''
+        title: '',
+        isShow: false
     }
 
     submitHandler = event => {
         event.preventDefault();
+        this.setState({ title: "" })
     }
 
     changeHandler = event => {
@@ -20,6 +22,15 @@ class Comment extends React.Component {
         // }}))
         this.setState({
             value: event.target.value
+            // [event.target.name]: event.target.value
+            
+        })
+
+    }
+
+    clickHandler = () => {
+        this.setState({
+            isShow: true
         })
     }
 
@@ -31,20 +42,23 @@ class Comment extends React.Component {
                 <form onSubmit={this.submitHandler} className="form">
                     <div>
                         <label htmlFor="textarea">Оставить Комментарий</label>
-                        <textarea id="textarea" name="textarea" rows="5" cols="25" onChange={this.changeHandler}/>
+                        <textarea id="textarea" name="title" rows="5" cols="25" onChange={this.changeHandler}/>
                     </div>
                     <div>
                         <label htmlFor="firstName">Имя</label>
-                        <input id="firstName" type="text" name="firstname" onChange={this.changeHandler}/>
+                        <input id="firstName" type="text" name="title" onChange={this.changeHandler}/>
                     </div>
                     <div>    
                         <label htmlFor="lastName">Фамилия</label>
-                        <input id="lastName" type="text" name="lastname" onChange={this.changeHandler}/>
+                        <input id="lastName" type="text" name="title" onChange={this.changeHandler}/>
                     </div> 
-                    <button>Оставить комментарий</button>  
+                    <button onClick={this.clickHandler}>Оставить комментарий</button>  
                 </form>
-                <p>{this.state.value}</p>
-                
+                {this.state.isShow ? 
+                <div>
+                    <p>{this.state.value}</p>
+                </div>
+                : <p>комментариев нет</p>}  
             </div>
         )
     }

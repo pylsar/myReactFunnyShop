@@ -5,9 +5,9 @@ import './ProductItem.scss'
 
 const ProductItem = ({product}) => {
     return (
-        <div className="productItem">
+        <div className="product-item">
             <h3>{product.title}</h3>
-            <div className="product__img">
+            <div className="product-item__img">
                 <img src={require(`../../assets/img/${product.img}`)} alt={product.title}/>
             </div>
             <span>Цена: {product.price}</span>
