@@ -1,0 +1,18 @@
+.like{
+    display: flex;
+    &__plus, &__minus, &__result {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+    }
+    &__plus, &__minus{
+      cursor: pointer;
+    }
+    &__result{
+      &--red{
+        color: red;
+      }
+    }
+  }

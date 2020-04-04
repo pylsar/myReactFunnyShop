@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Comment from '../../containers/Comment/Comment'
+import Comments from '../../containers/Comments/Comments'
 
 import './ProductInfo.scss'
 
@@ -17,7 +17,7 @@ const ProductInfo = ({product}) => {
                 <div className="productInfo__left__descr">{product.longDescr}</div>
                 <Link to='/products' className="productInfo__left--link">назад</Link>
             </div>
-            <Comment />
+            <Comments />
         </div>
     )
 }
