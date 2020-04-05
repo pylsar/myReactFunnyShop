@@ -10,8 +10,10 @@ const ProductItem = ({product}) => {
             <div className="product-item__img">
                 <img src={require(`../../assets/img/${product.img}`)} alt={product.title}/>
             </div>
-            <span>Цена: {product.price}</span>
-            <span>Кол-во: {product.quantity}</span>
+            <div className="product-item__info">
+                <span>Цена: {product.price}</span>
+                <span>Кол-во: {product.quantity}</span>
+            </div>    
             <Link to={`/products/${product.id}`}>Посмотреть продукт</Link>
         </div>
     )
