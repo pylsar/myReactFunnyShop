@@ -7,7 +7,6 @@
             margin: 20px 0px;
         }
         &__img {
-            border: 1px solid gray;
             width: 350px;
             height: 250px;
             display: flex;
@@ -21,13 +20,11 @@
         }
         & span {
             display: block;
-            border: 1px solid gray;
             width: 350px;
             margin: 20px;
         }
         &__descr {
             width: 350px;
-            border: 1px solid gray;
             margin: 20px;
         }
         &--link {

@@ -29,7 +29,6 @@ class Comments extends React.Component {
   render() {
     return (
       <div>
-        <h1>App</h1>
         <CommentInput addComment={this.addComment} />
         {this.state.isNotCommented ? (
           <p>Вы будете первым кто оставит комментарий</p>

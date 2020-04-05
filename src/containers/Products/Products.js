@@ -31,7 +31,7 @@ class Products extends React.Component {
                 <h1>Каталог Товаров</h1>
                 <div className="products__box">
                     {this.state.isLoading ? 
-                    <div>
+                    <div className="products__loading">
                         <h2>Товар приносят на сайт...</h2>
                         <img src={isLoadingIcon} alt="wait"/> 
                     </div>

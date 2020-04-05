@@ -2,7 +2,8 @@ import React, {Fragment} from 'react'
 
 import ProductInfo from '../../components/ProductInfo/ProductInfo'
 import {getProduct} from '../../API'
- 
+
+
 class ViewProduct extends React.Component {
 
     state={
