@@ -14,6 +14,9 @@ const Home = () => {
                     <li>
                         <Link to="/products">Каталог</Link>
                     </li>
+                    <li>
+                        <Link to="/search">Поиск</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

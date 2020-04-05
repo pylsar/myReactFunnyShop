@@ -1,9 +1,9 @@
 import React from 'react'
 
-import isLoadingIcon from '../../assets/img/isLoading.png'  
 import ProductItem from '../../components/ProductItem/ProductItem'
 import { getAllProducts} from '../../API'
 
+import isLoadingIcon from '../../assets/img/isLoading.png'  
 import './Products.scss'
 
 class Products extends React.Component {
@@ -41,7 +41,7 @@ class Products extends React.Component {
                                 < ProductItem key={product.id} product={product}/>
                             )
                         })}
-                </div>    
+                </div>   
             </div>
         )
     }
