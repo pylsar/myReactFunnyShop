@@ -2,16 +2,19 @@
     width: 100vw;
     height: 70px;
     background: gray;
+    display: flex;
+    justify-content: space-between;
     & nav {
         & ul {
             border: 1px solid red;
             height: 70px;
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
+            align-items: center;
             padding: 5px 20px;
             & li{
                 font-size: 20px;
+                margin-left: 20px;
                 & a {
                     text-decoration: none;
                     color: black;

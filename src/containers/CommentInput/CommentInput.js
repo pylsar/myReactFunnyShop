@@ -17,10 +17,10 @@ class CommentInput extends React.Component {
     })
   }
 
-  getComment(e) {
+  getComment(event) {
     this.setState({
       // comment: e.target.value
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     })
   }
 
