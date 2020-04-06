@@ -32,7 +32,7 @@ class Search extends React.Component {
                 
                 {this.state.products.filter(product =>{
                     return (
-                        // в нижний регистр и удаляем все что не совпадает
+                        // в нижний регистр и убираем все что не совпадает
                         product.title.toLowerCase().indexOf(this.state.search.toLowerCase()) >-1
                         // выводим все совпадения
                     )}).map(product => {
