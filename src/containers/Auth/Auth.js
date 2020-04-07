@@ -63,12 +63,11 @@ class Auth extends React.Component {
         event.preventDefault();
         const isValid = this.validate();
         if (isValid) {
-            //не работает
         this.setState({
-            initialState: initialState,
-            isRegestered: true,
-            isVisible: false
-        }); // очищаем если норм
+            initialState: initialState, // очищаем если норм
+            isRegestered: true,  // для имени в углу экрана
+            isVisible: false // закрываем если рега норм прошла
+        }); 
         }
     }
 
@@ -140,7 +139,6 @@ class Auth extends React.Component {
                             <div className="auth__form__box--error">{this.state.passwordError}</div>
                         </div>
                         <button type="submit">Авторизоваться</button>
-                        {/* {this.state.isRegestered && <div>успех</div>} */}
                     </form>
                 </div>
                 }

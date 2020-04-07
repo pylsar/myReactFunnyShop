@@ -18,6 +18,7 @@ class Comments extends React.Component {
   //   });
   // };
 
+
   // сообщения выводятся каждый раз в новом массиве, где предыдущие сообщени + новое сообщение
   addComment = comment => {
     this.setState(prevState => ({

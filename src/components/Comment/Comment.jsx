@@ -19,7 +19,6 @@ const Comment = props => {
         </div>
         <div className="comment__box__text">
           <p>{props.comment}</p>
-          <p />
         </div>
       </div>
       <div className="comment__box__bottom">

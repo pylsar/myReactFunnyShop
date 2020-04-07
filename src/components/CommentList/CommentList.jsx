@@ -6,8 +6,8 @@ const CommentList = props => {
     <div>
       {/* счетчик кол-ва сообщений */}
       <span>Количество комментариев: {props.comments.length}</span>
-      {/* выводим сообщения циклом */}
 
+      {/* выводим сообщения циклом */}
       {props.comments.map((comment, index) => (
         <Comment key={index} comment={comment} />
       ))}
