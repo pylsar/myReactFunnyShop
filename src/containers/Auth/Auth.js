@@ -3,7 +3,7 @@ import React from 'react'
 import './Auth.scss'
 
 const initialState = {
-    isVisible: true,
+    isVisible: false,
     firstname: '',
     lastname: '',
     email: '',
@@ -28,7 +28,7 @@ class Auth extends React.Component {
         if (!this.state.firstname) {
           firstnameError = "не может быть пустым"
         }
-        // поле фамилия
+    // поле фамилия
         if (!this.state.lastname) {
             lastnameError = "не может быть пустым"
           }
@@ -60,11 +60,15 @@ class Auth extends React.Component {
     }
 
     handleSubmit = (event) => {
-        event.preventDefault()
-        const isValid = this.validate()
+        event.preventDefault();
+        const isValid = this.validate();
         if (isValid) {
             //не работает
-        this.setState(initialState); // очищаем если норм
+        this.setState({
+            initialState: initialState,
+            isRegestered: true,
+            isVisible: false
+        }); // очищаем если норм
         }
     }
 
@@ -77,7 +81,7 @@ class Auth extends React.Component {
     render(){
         return(
             <div className="auth">
-                <span onClick={this.handleModal}>Авторизация</span>
+                {!this.state.isRegestered ? <span onClick={this.handleModal}>Авторизация</span> : <span onClick={this.handleModal}>{this.state.firstname}</span>}
                 {
                 this.state.isVisible &&
                  <div className="auth__form">
@@ -135,7 +139,8 @@ class Auth extends React.Component {
                             />
                             <div className="auth__form__box--error">{this.state.passwordError}</div>
                         </div>
-                        <button>Авторизоваться</button>
+                        <button type="submit">Авторизоваться</button>
+                        {/* {this.state.isRegestered && <div>успех</div>} */}
                     </form>
                 </div>
                 }
