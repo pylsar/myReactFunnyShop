@@ -1,5 +1,6 @@
 
 const LIKES_INCREMENT = 'LIKES_INCREMENT'
+const LIKES_DECREMENT = 'LIKES_DECREMENT'
 
 
 // здесь будут жить наши состояния
@@ -11,12 +12,18 @@ const initialState = {
 
 //actions
 export const actions = {
-   likeChanged(like){
+   likeChangedIncrement(like){
        return{
            type: LIKES_INCREMENT,
            like
        }
-   } 
+   }, 
+   likeChangedDecrement(like){
+    return{
+        type: LIKES_DECREMENT,
+        like
+    }
+   }
 }
 
 //создадим редюсер
@@ -25,14 +32,14 @@ export const actions = {
 export function reducer(state = initialState, action){
     switch(action.type){
         case LIKES_INCREMENT:{
-        // case LIKES_INCREMENT:
             return{
-                // ...state,
-                // like: action.like +1
                 like: state.like +1
-                
             }
-            // return state +1
+        }
+        case LIKES_DECREMENT:{
+            return{
+                like: state.like -1
+            }
         }
         default:
             return state
