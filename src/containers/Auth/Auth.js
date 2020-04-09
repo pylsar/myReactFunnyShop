@@ -80,7 +80,7 @@ class Auth extends React.Component {
     render(){
         return(
             <div className="auth">
-                {!this.state.isRegestered ? <span onClick={this.handleModal}>Авторизация</span> : <span onClick={this.handleModal}>{this.state.firstname}</span>}
+                {!this.state.isRegestered ? <span onClick={this.handleModal}>Авторизация</span> : <span onClick={this.handleModal}>{`${this.state.firstname} ${this.state.lastname}`}</span>}
                 {
                 this.state.isVisible &&
                  <div className="auth__form">
