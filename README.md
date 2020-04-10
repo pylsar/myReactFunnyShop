@@ -1,13 +1,18 @@
-для запуска:
-json-server ./src/assets/database.json --watch --port 3001
-npm start
+### для запуска:
+* json-server ./src/assets/database.json --watch --port 3001
+* npm start
 
 
-// технологии которые использую в проекте
-    react, create-react-app, scss, json-server
+* Технологии которые использую в проекте
+    * react 
+    * create-react-app 
+    * scss 
+    * json-server 
+    * redux 
+    * redux-logger 
 
 
-//todo
+### //todo
 [ ] пустые сообщения не отправлять
 [ ] добавить в локал сторидж
 [ ] добавить имя
