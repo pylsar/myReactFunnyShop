@@ -1,7 +1,8 @@
 import React from "react"
 
 import Like from '../../containers/Like/Like'
-import CurrentDate from '../../containers/CurrentDate/CurrentDate'
+import CurrentDate from '../CurrentDate/CurrentDate'
+
 
 import "./Comment.scss"
 
