@@ -1,6 +1,7 @@
 import React from "react"
 import {connect} from 'react-redux'
-import { actions } from '../../store'
+// import { actions } from '../../store'
+import { actions } from '../../actions/actions'
 import "./Like.scss"
 
 class Like extends React.Component {
@@ -29,7 +30,7 @@ class Like extends React.Component {
 
 function mapStateToProps(state){
   return{
-    like: state.like
+    like: state.likes.like   // likes берется из rootReducer
   }
 }
 
