@@ -11,7 +11,6 @@ import {rootReducer} from './reducers/rootReducer'
 
 // const devTools = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__() : null
 
-// потом переделать на rootreducer
 const store = createStore(rootReducer,compose(applyMiddleware(logger)));
 ReactDOM.render(
     <Provider store={store}>

@@ -13,5 +13,10 @@ export const actions = {
          type: types.LIKES_DECREMENT,
          like
      }
+    },
+    modalToggle(){
+        return{
+            type: types.AUTH_FORM
+        }
     }
  }

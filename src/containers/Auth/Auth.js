@@ -1,9 +1,12 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import { actions } from '../../actions/actions'
 
 import './Auth.scss'
 
 const initialState = {
-    isVisible: false,
+    // isVisible: false,
+    isRegestered: false,
     firstname: '',
     lastname: '',
     email: '',
@@ -53,11 +56,11 @@ class Auth extends React.Component {
         return true; // если нет ошибок
       };
 
-    handleModal = () => {
-        this.setState({
-            isVisible: !this.state.isVisible
-        })
-    }
+    // handleModal = () => {
+    //     this.setState({
+    //         isVisible: !this.state.isVisible
+    //     })
+    // }
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -80,9 +83,9 @@ class Auth extends React.Component {
     render(){
         return(
             <div className="auth">
-                {!this.state.isRegestered ? <span onClick={this.handleModal}>Авторизация</span> : <span onClick={this.handleModal}>{`${this.state.firstname} ${this.state.lastname}`}</span>}
+                {!this.state.isRegestered ? <span onClick={this.props.onModalToggle}>Авторизация</span> : <span onClick={this.props.onModalToggle}>{`${this.props.firstname} ${this.props.lastname}`}</span>}
                 {
-                this.state.isVisible &&
+                this.props.isVisible &&
                  <div className="auth__form">
                     <h3>Авторизация</h3>
                     <form onSubmit={this.handleSubmit} className="auth__form__box">
@@ -147,4 +150,18 @@ class Auth extends React.Component {
     }
 }
 
-export default Auth
+function mapStateToProps(state){
+    return{
+        isVisible: state.auths.isVisible   // берётся из rootReducer
+    }
+  }
+  
+  function mapDispatchToProps(dispatch){
+    return{
+        onModalToggle(){
+        dispatch(actions.modalToggle()) //actions во множетвенном числе см импорты
+      }
+    }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Auth)
