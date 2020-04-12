@@ -16,7 +16,12 @@ export const actions = {
     },
     modalToggle(){
         return{
-            type: types.AUTH_FORM
+            type: types.AUTH_FORM_VISIBLE
+        }
+    },
+    regestered(){
+        return{
+            type: types.AUTH_FORM_REGESTERD
         }
     }
  }

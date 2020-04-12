@@ -1,4 +1,5 @@
 // тут будут жить наши константы типов
 export const LIKES_INCREMENT = 'LIKE/LIKES_INCREMENT'
 export const LIKES_DECREMENT = 'LIKE/LIKES_DECREMENT'
-export const AUTH_FORM = 'AUTH/AUTH_FORM'
+export const AUTH_FORM_VISIBLE = 'AUTH/AUTH_FORM_VISIBLE'
+export const AUTH_FORM_REGESTERD = 'AUTH/AUTH_FORM_REGESTERED'

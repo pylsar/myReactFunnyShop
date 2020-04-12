@@ -6,7 +6,7 @@ import './Auth.scss'
 
 const initialState = {
     // isVisible: false,
-    isRegestered: false,
+    // isRegestered: false,
     firstname: '',
     lastname: '',
     email: '',
@@ -66,11 +66,12 @@ class Auth extends React.Component {
         event.preventDefault();
         const isValid = this.validate();
         if (isValid) {
-        this.setState({
-            initialState: initialState, // очищаем если норм
-            isRegestered: true,  // для имени в углу экрана
-            isVisible: false // закрываем если рега норм прошла
-        }); 
+            this.props.onRegestered()
+        // this.setState({
+        //     initialState: initialState, // очищаем если норм
+        //     isRegestered: true,  
+        //     isVisible: false // закрываем если рега норм прошла
+        // }); 
         }
     }
 
@@ -83,7 +84,7 @@ class Auth extends React.Component {
     render(){
         return(
             <div className="auth">
-                {!this.state.isRegestered ? <span onClick={this.props.onModalToggle}>Авторизация</span> : <span onClick={this.props.onModalToggle}>{`${this.props.firstname} ${this.props.lastname}`}</span>}
+                {!this.props.isRegestered ? <span onClick={this.props.onModalToggle}>Авторизация</span> : <span onClick={this.props.onModalToggle}>{`${this.state.firstname} ${this.state.lastname}`}</span>}
                 {
                 this.props.isVisible &&
                  <div className="auth__form">
@@ -141,7 +142,7 @@ class Auth extends React.Component {
                             />
                             <div className="auth__form__box--error">{this.state.passwordError}</div>
                         </div>
-                        <button type="submit">Авторизоваться</button>
+                        <button type="submit" onClick={this.handleSubmit}>Авторизоваться</button>
                     </form>
                 </div>
                 }
@@ -152,7 +153,9 @@ class Auth extends React.Component {
 
 function mapStateToProps(state){
     return{
-        isVisible: state.auths.isVisible   // берётся из rootReducer
+        //тут наши стейты
+        isVisible: state.auths.isVisible,   // берётся из rootReducer
+        isRegestered: state.auths.isRegestered
     }
   }
   
@@ -160,7 +163,10 @@ function mapStateToProps(state){
     return{
         onModalToggle(){
         dispatch(actions.modalToggle()) //actions во множетвенном числе см импорты
-      }
+      },
+        onRegestered(){
+            dispatch(actions.regestered())
+        }
     }
   }
 
