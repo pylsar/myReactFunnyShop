@@ -1,13 +1,16 @@
+@import '../../settings.scss';
+
 .products{
     & h1{
+        color: $mainText;
         text-align: center ;
         margin-top: 30px;
         margin-bottom: 30px;
     }
     &__box {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include flexbox;
+        @include justify-content(space-between);
+        @include flex-wrap(wrap);
     }
     &__loading{
         margin: 0 auto;
