@@ -1,7 +1,9 @@
+@import '../../settings.scss';
+
 .home {
-    background: lightgray;
     padding: 20px;
     text-align: center;
+    height: calc(100vh - 70px);
     & h1 {
         font-size: 40px;
     }

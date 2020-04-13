@@ -4,15 +4,16 @@
     & h1{
         color: $mainText;
         text-align: center ;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     &__box {
         @include flexbox;
-        @include justify-content(space-between);
+        @include justify-content(space-around);
         @include flex-wrap(wrap);
     }
     &__loading{
         margin: 0 auto;
+        height: calc(100vh - 70px);
     }
 }

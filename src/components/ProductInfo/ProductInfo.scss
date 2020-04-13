@@ -1,5 +1,7 @@
+@import '../../settings.scss';
+
 .productInfo{
-    display: flex;
+    @include flexbox;
     &__left {
         border-right: 1px solid gray;
         & h3 {
@@ -7,11 +9,11 @@
             margin: 20px 0px;
         }
         &__img {
+            @include flexbox;
+            @include justify-content(center);
+            @include align-items(center);
             width: 350px;
             height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             margin: 0 auto;
             & img {
                 max-width: 100%;
@@ -29,12 +31,12 @@
         }
         &--link {
             display: inline-block;
-            background: gray;
+            background: $button;
             padding: 10px 20px;
             margin: 20px;
             font-size: 20px;
             text-decoration: none;
-            color: black;
+            color: $mainLink;
         }
     }
    

@@ -1,9 +1,14 @@
 // переменные
 $mainText: black; // цвет основного текста
+$mainLink: black; // цвет ссылок
+$mainLinkHover: white;
+$border: black; // цвет границ
 
-$box-shadow: -5px 5px 50px -5px #010101; // тень карточек
+$mainBg: linear-gradient(90deg, #aea4e3, #d3ffe8); // цвет контента
+$secondaryBg: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); // цвет футера и хэдера
+$button: linear-gradient(to top left, powderblue, pink); // цвет кнопок
+$thirdBg: lightgray; // цвет авторизации, боди, комментарии 
 
-$mainBg: linear-gradient(90deg, #8d8770, #fab397); // заливка контента
 
 
 // миксины
@@ -45,4 +50,10 @@ $mainBg: linear-gradient(90deg, #8d8770, #fab397); // заливка конте�
        -ms-flex-align: $align;
           align-items: $align;
 }
+
+@mixin boxShadow{
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+     -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+          box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+} 
 

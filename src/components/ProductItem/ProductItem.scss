@@ -1,15 +1,17 @@
+@import '../../settings.scss';
+
 .product-item {
     width: 350px;
     height: 400px;
-    border: 1px solid red;
+    border: 1px solid $border;
     margin-top: 20px;
     &__img {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
         width: 200px;
         height: 200px;
-        border: 1px solid green;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        border: 1px solid $border;
         margin: 0 auto;
         & img {
             max-width: 100%;
@@ -17,8 +19,8 @@
         }
     }
     &__info{
-        display: flex;
-        flex-direction: column;
+        @include flexbox;
+        @include flex-direction(column);
         padding: 10px 20px;
         & span {
             margin: 5px 0;
@@ -31,14 +33,18 @@
         margin: 30px auto 0 auto;
         font-size: 20px;
         font-weight: bold;
-        color: black;
+        color: $mainLink;
         text-decoration: none;
         &:hover{
             text-decoration: underline;
+            color: $mainLinkHover;
         }
     }
     & h3 {
         text-align: center;
         margin: 10px 0;
+    }
+    &:hover{
+        @include boxShadow;
     }
 }

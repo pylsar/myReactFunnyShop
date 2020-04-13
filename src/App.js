@@ -4,9 +4,11 @@ import {Route, Switch} from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import Products from './containers/Products/Products'
-import ViewProduct from './containers/ViewProduct/ViewProduct';
+import ViewProduct from './containers/ViewProduct/ViewProduct'
 import Search from './containers/Search/Search'
 import Error404 from './components/Error404/Error404'
+
+import './App.scss';
 
 function App() {
   return (
