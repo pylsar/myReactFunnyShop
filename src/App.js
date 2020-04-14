@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import Products from './containers/Products/Products'
 import ViewProduct from './containers/ViewProduct/ViewProduct'
 import Search from './containers/Search/Search'
+import Footer from './components/Footer/Footer'
 import Error404 from './components/Error404/Error404'
 
 import './App.scss';
@@ -23,6 +24,7 @@ function App() {
           <Route path="*" component={Error404} />
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 }
