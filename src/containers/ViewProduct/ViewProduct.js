@@ -1,7 +1,10 @@
 import React, {Fragment} from 'react'
 
 import ProductInfo from '../../components/ProductInfo/ProductInfo'
+import Loader from '../../components/Loader/Loader'
 import {getProduct} from '../../API'
+
+import './ViewProduct.scss'
 
 
 class ViewProduct extends React.Component {
@@ -28,14 +31,18 @@ class ViewProduct extends React.Component {
 
     render(){
         return (
-            <Fragment>
+            <div className="viewProduct">
                 {
                     this.state.isLoading ?
-                    <h2>Идет Загрузка товара</h2>:
+                    <Fragment>
+                        <h2>Идет Загрузка товара</h2>
+                        <Loader />
+                    </Fragment>
+                    :
                     <ProductInfo product={this.state.product}/>
                 }
           
-            </Fragment>
+            </div>
         )
     }
 }

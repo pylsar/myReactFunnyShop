@@ -1,0 +1,52 @@
+@import '../../settings.scss';
+
+.loader{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    &__box{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & span{
+            width: 30px;
+            height: 30px;
+            background: black;
+            display: block;
+            border-radius: 50%;
+            margin-left: 10px;
+            &:not(:last-child){
+                animation: row 1s linear infinite;
+            }
+            &:last-child{
+                animation: jump 1s ease-in-out infinite;
+            }
+        }
+    }
+}  
+  
+  
+@keyframes row{
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(40px);
+    }
+}
+
+@keyframes jump {
+    0%{
+        transform: translate(0,0);
+    }
+    10%{
+        transform: translate(0,-90px);
+    }
+    90%{
+        transform: translate(-160px, -90px);
+    }
+    100% {
+        transform: translate(-160px,0);
+    }
+}
