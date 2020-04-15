@@ -25,7 +25,7 @@ class ViewProduct extends React.Component {
                         isLoading: false,
                         product: product
                     })
-                },1000)
+                },1500)
             })
     }
 

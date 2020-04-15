@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 import './Footer.scss'
 
@@ -8,16 +7,16 @@ const Footer = () => {
         <footer className="footer">
             <ul>
                 <li>
-                    <Link to="https://codepen.io/collection/Aawzba">CodePen</Link>
+                    <a href="https://codepen.io/collection/Aawzba" target="_blank" rel="nofolow">CodePen</a>
                 </li>
                 <li>
-                    <Link to="https://codesandbox.io/u/pylsar">CodeSandbox</Link>
+                    <a href="https://codesandbox.io/u/pylsar" target="_blank" rel="nofolow">CodeSandbox</a>
                 </li>
                 <li>
-                    <Link to="https://github.com/pylsar">GitHub</Link>
+                    <a href="https://github.com/pylsar" target="_blank" rel="nofolow">GitHub</a>
                 </li>
                 <li>
-                    <Link to="www.codewars.com/users/pylsar">CodeWars</Link>
+                    <a href="www.codewars.com/users/pylsar" target="_blank" rel="nofolow">CodeWars</a>
                 </li>
             </ul>
         </footer>

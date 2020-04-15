@@ -11,14 +11,6 @@ class Comments extends React.Component {
     isNotCommented: true
   }
 
-  // таким способом выводим только 1 сообщение и след его затрет
-  // addComment = comment => {
-  //   this.setState({
-  //     comments: [comment]
-  //   });
-  // };
-
-
   // сообщения выводятся каждый раз в новом массиве, где предыдущие сообщени + новое сообщение
   addComment = comment => {
     this.setState(prevState => ({
