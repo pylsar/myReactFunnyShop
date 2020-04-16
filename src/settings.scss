@@ -8,6 +8,7 @@ $mainBg: linear-gradient(90deg, #aea4e3, #d3ffe8); // цвет контента
 $secondaryBg: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); // цвет футера и хэдера
 $button: linear-gradient(to top left, powderblue, pink); // цвет кнопок
 $thirdBg: lightgray; // цвет авторизации, боди, комментарии 
+$different: #3B3B98; // цвет поиска
 
 
 
@@ -56,4 +57,11 @@ $thirdBg: lightgray; // цвет авторизации, боди, коммен�
      -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
           box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 } 
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
 

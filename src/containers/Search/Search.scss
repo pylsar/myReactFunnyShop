@@ -1,8 +1,52 @@
+@import '../../settings.scss';
+
 .search {
     min-height: calc(100vh - 140px);
     &__box {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+    }
+    & h2 {
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__place {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        width: 30px;
+        margin: 0 auto;
+        &--input {
+            height: 32px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            width: 22px;
+            transform: translate(-26px, -2px);
+        }
+        &__img{
+            &--icon {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background: $different;
+                padding: 5px;
+                cursor: pointer;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        &--result{
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        &:hover &--input{
+            width: 200px;
+            padding-left: 40px;
+        }
     }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import {getAllProducts} from '../../API'
 import ProductItem from '../../components/ProductItem/ProductItem'
 
+import SearchIcon from '../../assets/img/SearchIcon.png'
 import './Search.scss'
 
 class Search extends React.Component {
@@ -39,9 +40,14 @@ class Search extends React.Component {
         return (
             <div className="search">
                 <h2>Введите имя товара</h2>
-                <input onChange={this.handleSearch} type="text" value={this.state.search} />
+                <div className="search__place">
+                    <div className="search__place__img">
+                        <img className="search__place__img--icon" src={SearchIcon} alt="search" />
+                    </div>
+                    <input className="search__place--input" onChange={this.handleSearch} type="text" value={this.state.search} />
+                </div>
                 {/* выводим текст поиска на экран */}
-                {this.state.search && <p>Вы ввели: {this.state.search}</p>}
+                {this.state.search && <p className="search__place--result">Вы ввели: {this.state.search}</p>}
                 {/* выводим карточку товара если не пустая строка поиска */}
                 {this.state.search && <div className="search__box">{filterSearch}</div> } 
             </div> 
