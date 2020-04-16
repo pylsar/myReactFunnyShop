@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+import cartIcon from '../../assets/img/cart.png'
+
 import './Home.scss'
 
 const Home = () => {
@@ -11,6 +13,7 @@ const Home = () => {
            <p>
                <Link to="/products" className="home--link">Каталог тут</Link>
            </p>
+           <img src={cartIcon} alt="магазин"/>
         </div>
     )
 }

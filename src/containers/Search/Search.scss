@@ -3,9 +3,9 @@
 .search {
     min-height: calc(100vh - 140px);
     &__box {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        @include flexbox;
+        @include justify-content(space-around);
+        @include flex-wrap(wrap);
     }
     & h2 {
         text-align: center;
@@ -24,7 +24,7 @@
             border: none;
             outline: none;
             width: 22px;
-            transform: translate(-26px, -2px);
+            transform: translate(-27px, -2px);
         }
         &__img{
             &--icon {
