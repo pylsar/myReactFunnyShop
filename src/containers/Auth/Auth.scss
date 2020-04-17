@@ -41,9 +41,21 @@
             }
         }
     }
+    & img {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        &:hover {
+            transform: rotate(90deg);
+            transition: all .5s ease; 
+        }
+    }
     &__modalOverlay {
         background: black;
-        opacity: .5;
+        opacity: .7;
         width: 100vw;
         height: auto;
         position: fixed;

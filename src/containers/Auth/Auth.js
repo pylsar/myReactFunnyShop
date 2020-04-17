@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import {connect} from 'react-redux'
 import { actions } from '../../actions/actions'
 
+import closeIcon from '../../assets/img/close.svg'
 import './Auth.scss'
 
 const initialState = {
@@ -93,6 +94,7 @@ class Auth extends React.Component {
                     {/* форма авторизации */}
                     <div className="auth__form">
                         <h3>Авторизация</h3>
+                        <img src={closeIcon} alt="closeBtn" onClick={this.props.onModalToggle} />
                         <form onSubmit={this.handleSubmit} className="auth__form__box">
                             <div>
                                 <label htmlFor="firstname">Имя</label>

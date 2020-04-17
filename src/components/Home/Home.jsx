@@ -9,11 +9,13 @@ const Home = () => {
     return (
         <div className="home">
            <h1>Магазин крутых вещей</h1>
-           <p className="home--subtitle">тут можно купить все(это вам не али экспресс какой-нибудь)</p> 
+           <p className="home--subtitle"> <time datetime="2020-01-01">Мы открылись!</time> и у нас можно купить все</p> 
+           <small>(это вам не али экспресс какой-нибудь)</small>
            <p>
                <Link to="/products" className="home--link">Каталог тут</Link>
            </p>
            <img src={cartIcon} alt="магазин"/>
+           
         </div>
     )
 }
