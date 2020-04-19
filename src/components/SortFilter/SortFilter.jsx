@@ -1,16 +1,18 @@
 import React from 'react'
 
+import './SortFilter.scss'
+
 class SortFilter extends React.Component {
    render(){
     return (
-        <div>
-            <p>Товаров на сайте: {this.props.count}</p>
+        <div className="sortFilter">
+            <p>Товаров на сайте: {this.props.countProducts}</p>
             <label>
-                Отсортировать по цене:
+                Сортировать по цене: 
                 <select value={this.props.sort} onChange={this.props.handleSort}>
-    <option value="">{!this.props.sort ? 'сортировать по:' : 'вернуть как было'}</option>
-                    <option value="expensive">Ого как дорого</option>
-                    <option value="cheap">Дешманские</option>
+                    <option value="">{!this.props.sort ? 'сортировать по:' : 'вернуть как было'}</option>
+                    <option value="expensive">ого как дорого</option>
+                    <option value="cheap">дешманские</option>
                 </select>
             </label>
         </div>

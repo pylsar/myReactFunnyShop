@@ -50,7 +50,7 @@ class Products extends React.Component {
         return(
             <div className="products">
                 <h1>Каталог Товаров</h1>
-                <SortFilter sort={this.state.sort} handleSort={this.handleSort.bind(this)} count={this.state.products.length}/>
+                <SortFilter sort={this.state.sort} handleSort={this.handleSort.bind(this)} countProducts={this.state.products.length}/>
                 <div className="products__box">
                     {this.state.isLoading ? 
                     <div className="products__loading">

@@ -48,6 +48,8 @@ class Search extends React.Component {
                 </div>
                 {/* выводим текст поиска на экран */}
                 {this.state.search && <p className="search__place--result">Вы ввели: {this.state.search}</p>}
+                {/* если поиск не пустой выводим кол-во найденного товара */}
+                <p>товаров найдено: {this.state.search ? filterSearch.length : '0'}</p>
                 {/* выводим карточку товара если не пустая строка поиска */}
                 {this.state.search && <div className="search__box">{filterSearch}</div> } 
             </div> 

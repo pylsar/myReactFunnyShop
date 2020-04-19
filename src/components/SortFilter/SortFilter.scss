@@ -1,0 +1,13 @@
+@import '../../settings.scss';
+
+.sortFilter {
+    height: 26px;
+    @include flexbox;
+    @include justify-content(space-around);
+    @include align-items(center);
+    & label {
+        & select {
+            width: 130px;
+        }
+    }
+}
