@@ -14,7 +14,10 @@
         padding: 10px 0 20px 0;
     }
     &__loading{
-        margin: 0 auto;
+        margin: 20px auto;
         height: calc(100vh - 70px);
+        & h2 {
+            margin-bottom: 20px;
+        }
     }
 }

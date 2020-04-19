@@ -46,10 +46,12 @@ class Search extends React.Component {
                     </div>
                     <input className="search__place--input" onChange={this.handleSearch} type="text" value={this.state.search} />
                 </div>
-                {/* выводим текст поиска на экран */}
-                {this.state.search && <p className="search__place--result">Вы ввели: {this.state.search}</p>}
-                {/* если поиск не пустой выводим кол-во найденного товара */}
-                <p>товаров найдено: {this.state.search ? filterSearch.length : '0'}</p>
+                <div className="search__result">
+                    {/* выводим текст поиска на экран */}
+                    {this.state.search && <p>Вы ввели: {this.state.search}</p>}
+                    {/* если поиск не пустой выводим кол-во найденного товара */}
+                    <p>товаров найдено: {this.state.search ? filterSearch.length : '0'}</p>
+                </div>    
                 {/* выводим карточку товара если не пустая строка поиска */}
                 {this.state.search && <div className="search__box">{filterSearch}</div> } 
             </div> 

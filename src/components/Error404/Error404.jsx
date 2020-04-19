@@ -4,7 +4,7 @@ import './Error404.scss'
 const Error404 = () => {
     return (
         <div className="error">
-            <h1>Нет такой страницы</h1>
+            <h2>Ашипка 404</h2>
         </div>
     )
 }

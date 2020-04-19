@@ -21,7 +21,7 @@ function App() {
           <Route path="/products" component={Products} exact/>
           <Route path="/products/:id" component={ViewProduct} />
           <Route path="/search" component={Search} exact/>
-          <Route path="*" component={Error404} />
+          <Route path="*" component={Error404} /> {/* всегда в конце */}
         </Switch>
       </main>
       <Footer />
