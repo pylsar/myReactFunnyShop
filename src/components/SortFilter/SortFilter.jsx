@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './SortFilter.scss'
 
@@ -18,7 +19,11 @@ class SortFilter extends React.Component {
         </div>
         )
     }
-   
+}
+
+SortFilter.propTypes = {
+    countProducts: PropTypes.number.isRequired,
+    sort: PropTypes.string.isRequired
 }
 
 export default SortFilter

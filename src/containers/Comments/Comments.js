@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from 'prop-types'
+
 import CommentInput from '../../containers/CommentInput/CommentInput'
 import CommentList from '../../components/CommentList/CommentList'
 
@@ -31,6 +33,11 @@ class Comments extends React.Component {
       </div>
     )
   }
+}
+
+Comments.propTypes = {
+  comments: PropTypes.array,
+  isNotCommented: PropTypes.bool
 }
 
 export default Comments

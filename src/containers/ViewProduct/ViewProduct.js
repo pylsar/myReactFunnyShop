@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import PropTypes from 'prop-types'
 
 import ProductInfo from '../../components/ProductInfo/ProductInfo'
 import Loader from '../../components/Loader/Loader'
@@ -45,6 +46,11 @@ class ViewProduct extends React.Component {
             </div>
         )
     }
+}
+
+ViewProduct.propTypes = {
+    product: PropTypes.object,
+    isLoading: PropTypes.bool
 }
 
 export default ViewProduct

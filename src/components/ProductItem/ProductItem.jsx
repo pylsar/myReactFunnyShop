@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import './ProductItem.scss'
 
@@ -17,6 +18,10 @@ const ProductItem = ({product}) => {
             <Link to={`/products/${product.id}`}>Посмотреть продукт</Link>
         </div>
     )
+}
+
+ProductItem.propTypes = {
+    product: PropTypes.object.isRequired
 }
 
 export default ProductItem

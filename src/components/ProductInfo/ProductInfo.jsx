@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
+
 import Comments from '../../containers/Comments/Comments'
 
 import './ProductInfo.scss'
@@ -20,6 +22,10 @@ const ProductInfo = ({product}) => {
             <Comments />
         </div>
     )
+}
+
+ProductInfo.propTypes = {
+    product: PropTypes.object.isRequired
 }
 
 export default ProductInfo

@@ -5,7 +5,7 @@ import './Loader.scss'
 const Loader = () => {
     return (
         <div className="loader">
-            <div class="loader__box">
+            <div className="loader__box">
                 <span></span>
                 <span></span>
                 <span></span>

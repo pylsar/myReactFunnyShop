@@ -1,4 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+
 import {getAllProducts} from '../../API'
 import ProductItem from '../../components/ProductItem/ProductItem'
 
@@ -57,6 +60,11 @@ class Search extends React.Component {
             </div> 
         )
     }
+}
+
+Search.propTypes = {
+    products: PropTypes.array,
+    search: PropTypes.string
 }
 
 export default Search

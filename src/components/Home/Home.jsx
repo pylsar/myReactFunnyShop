@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className="home">
            <h1>Магазин крутых вещей</h1>
-           <p className="home--subtitle"> <time datetime="2020-01-01">Мы открылись!</time> и у нас можно купить все</p> 
+           <p className="home--subtitle"> <time dateTime="2020-01-01">Мы открылись!</time> и у нас можно купить все</p> 
            <small>(это вам не али экспресс какой-нибудь)</small>
            <p>
                <Link to="/products" className="home--link">Каталог тут</Link>

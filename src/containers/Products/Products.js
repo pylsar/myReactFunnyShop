@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import ProductItem from '../../components/ProductItem/ProductItem'
 import { getAllProducts} from '../../API'
@@ -67,6 +68,12 @@ class Products extends React.Component {
             </div>
         )
     }
+}
+
+Products.propTypes = {
+    isLoading: PropTypes.bool,
+    products: PropTypes.array,
+    sort: PropTypes.string
 }
 
 export default Products

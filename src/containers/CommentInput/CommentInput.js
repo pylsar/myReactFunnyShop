@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 
 class CommentInput extends React.Component {
   state = {
@@ -45,6 +46,10 @@ class CommentInput extends React.Component {
       </div>
     )
   }
+}
+
+CommentInput.propTypes = {
+  comment: PropTypes.string
 }
 
 export default CommentInput

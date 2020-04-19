@@ -1,7 +1,10 @@
 import React from "react"
 import {connect} from 'react-redux'
-// import { actions } from '../../store'
+import PropTypes from 'prop-types'
+
+
 import { actions } from '../../actions/actions'
+
 import "./Like.scss"
 
 class Like extends React.Component {
@@ -43,6 +46,10 @@ function mapDispatchToProps(dispatch){
       dispatch(actions.likeChangedDecrement(like))
     }
   }
+}
+
+Like.propTypes = {
+  like: PropTypes.number.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Like)

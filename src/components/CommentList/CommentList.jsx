@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from 'prop-types'
+
 import Comment from '../Comment/Comment'
 
 const CommentList = props => {
@@ -14,5 +16,9 @@ const CommentList = props => {
     </div>
   );
 };
+
+CommentList.propTypes = {
+  comments: PropTypes.array.isRequired,
+}
 
 export default CommentList

@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 
 import Like from '../../containers/Like/Like'
 import CurrentDate from '../CurrentDate/CurrentDate'
@@ -28,6 +29,10 @@ const Comment = props => {
       </div>
     </div>
   )
+}
+
+Comment.propTypes = {
+  comment: PropTypes.string.isRequired
 }
 
 export default Comment

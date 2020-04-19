@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import {connect} from 'react-redux'
-import { actions } from '../../actions/actions'
+import PropTypes from 'prop-types'
 
+import { actions } from '../../actions/actions'
 import closeIcon from '../../assets/img/close.svg'
 import './Auth.scss'
 
@@ -176,5 +177,18 @@ function mapStateToProps(state){
         }
     }
   }
+
+  Auth.propTypes = {
+    isVisible: PropTypes.bool.isRequired,
+    isRegestered: PropTypes.bool.isRequired,
+    firstname: PropTypes.string,
+    lastname: PropTypes.string,
+    email: PropTypes.string,
+    password: PropTypes.string,
+    firstnameError: PropTypes.string,
+    lastnameError: PropTypes.string,
+    emailError: PropTypes.string,
+    passwodError: PropTypes.string,
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Auth)
