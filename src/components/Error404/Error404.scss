@@ -1,8 +1,28 @@
+@import '../../settings.scss';
+
 .error{
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
     height: calc(100vh - 140px);
     & h2 {
         font-size: 70px;
-        text-align: center;
-        padding: 20px 0;
+        & span {
+            text-shadow: 5px 5px 10px black, 2px 2px 4px red;
+            animation: blink 3s infinite alternate;
+        }
+    }
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
     }
 }

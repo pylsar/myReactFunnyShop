@@ -23,7 +23,7 @@ class SortFilter extends React.Component {
 
 SortFilter.propTypes = {
     countProducts: PropTypes.number.isRequired,
-    sort: PropTypes.string.isRequired
+    sort: PropTypes.string.isRequired,
 }
 
 export default SortFilter
