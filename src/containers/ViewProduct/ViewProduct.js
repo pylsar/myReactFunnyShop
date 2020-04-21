@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import ProductInfo from '../../components/ProductInfo/ProductInfo'
 import Loader from '../../components/Loader/Loader'
 import {getProduct} from '../../API'
+import Cart from '../../components/Cart/Cart'
 
 import './ViewProduct.scss'
 
@@ -12,7 +13,9 @@ class ViewProduct extends React.Component {
 
     state={
         isLoading: true,
-        product: {}
+        product: {},
+        productInCart: false,
+        cartItems: []
     }
 
 
@@ -30,6 +33,17 @@ class ViewProduct extends React.Component {
             })
     }
 
+    handleAddToCart = (product) => {
+        this.setState({
+            productInCart: true
+          });
+          // добавляем товар в массив корзины
+          if (!this.state.productInCart) {
+            this.state.cartItems.push({ ...product, countCartItems: 1 });
+          }
+          
+      };
+
     render(){
         return (
             <div className="viewProduct">
@@ -40,7 +54,10 @@ class ViewProduct extends React.Component {
                         <Loader />
                     </Fragment>
                     :
-                    <ProductInfo product={this.state.product}/>
+                    <Fragment>
+                        <Cart cartItems={this.state.cartItems} handleRemoveFromCart={this.state.handleRemoveFromCart} product={this.state.product}/>
+                        <ProductInfo product={this.state.product} handleAddToCart={this.handleAddToCart} productInCart={this.state.productInCart}/>
+                    </Fragment>
                 }
           
             </div>

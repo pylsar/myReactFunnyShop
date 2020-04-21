@@ -47,6 +47,8 @@ class Products extends React.Component {
         })
     }
 
+    
+
     render(){
         return(
             <div className="products">
@@ -61,7 +63,7 @@ class Products extends React.Component {
                     : 
                     this.state.products.map((product) => {
                             return (
-                                < ProductItem key={product.id} product={product}/>
+                                < ProductItem key={product.id} product={product} />
                             )
                         })}
                 </div>   

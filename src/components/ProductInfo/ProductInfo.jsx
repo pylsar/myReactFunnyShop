@@ -6,7 +6,7 @@ import Comments from '../../containers/Comments/Comments'
 
 import './ProductInfo.scss'
 
-const ProductInfo = ({product}) => {
+const ProductInfo = ({product, handleAddToCart, productInCart}) => {
     return (
         <div className="productInfo">
             <div className="productInfo__left">
@@ -18,6 +18,9 @@ const ProductInfo = ({product}) => {
                 <span>Кол-во: {product.quantity}</span>
                 <div className="productInfo__left__descr">{product.longDescr}</div>
                 <Link to='/products' className="productInfo__left--link">назад</Link>
+                {
+                productInCart ? <button>Убрать из карзины</button> : <button onClick={handleAddToCart}>Добавить в корзину</button>
+                }
             </div>
             <Comments />
         </div>
