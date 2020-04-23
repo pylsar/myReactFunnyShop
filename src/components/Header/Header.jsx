@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Calc from '../../containers/Calc/Calc'
 import Auth from '../../containers/Auth/Auth'
 
 import './Header.scss'
@@ -20,6 +21,7 @@ const Home = () => {
                     </li>
                 </ul>
             </nav>
+            <Calc />
             <Auth />
         </header>
     )

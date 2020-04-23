@@ -21,6 +21,7 @@ class ViewProduct extends React.Component {
 
     componentDidMount(){
         // console.log(this.props)
+        // взяли из консоли
         const {id} = this.props.match.params
         getProduct(id)
             .then(product => {
@@ -41,8 +42,9 @@ class ViewProduct extends React.Component {
           if (!this.state.productInCart) {
             this.state.cartItems.push({ ...product, countCartItems: 1 });
           }
-          
       };
+
+
 
     render(){
         return (
@@ -55,8 +57,8 @@ class ViewProduct extends React.Component {
                     </Fragment>
                     :
                     <Fragment>
-                        <Cart cartItems={this.state.cartItems} handleRemoveFromCart={this.state.handleRemoveFromCart} product={this.state.product}/>
-                        <ProductInfo product={this.state.product} handleAddToCart={this.handleAddToCart} productInCart={this.state.productInCart}/>
+                        <Cart cartItems={this.state.cartItems} product={this.state.product}/>
+                        <ProductInfo product={this.state.product} handleAddToCart={this.handleAddToCart} productInCart={this.state.productInCart} />
                     </Fragment>
                 }
           

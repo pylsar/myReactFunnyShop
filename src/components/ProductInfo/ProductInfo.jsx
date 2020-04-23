@@ -6,7 +6,7 @@ import Comments from '../../containers/Comments/Comments'
 
 import './ProductInfo.scss'
 
-const ProductInfo = ({product, handleAddToCart, productInCart}) => {
+const ProductInfo = ({product, handleAddToCart, productInCart }) => {
     return (
         <div className="productInfo">
             <div className="productInfo__left">
