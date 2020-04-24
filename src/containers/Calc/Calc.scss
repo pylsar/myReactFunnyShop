@@ -1,7 +1,7 @@
 @import '../../settings.scss';
 
 .calc {
-    & img {
+    &--icon {
         height: 70px;
         cursor: pointer;
     }
@@ -9,16 +9,44 @@
         @include flexbox;
         @include justify-content(center);
         @include align-items(center);
+        @include flex-direction(column);
         width: 300px;
         height: 300px;
-        background: green;
+        background: $thirdBg;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        & input {
-            width: 100px;
-            margin-left: 20px;
+        z-index: 100;
+        &__main{
+            margin-bottom: 30px;
+            & input {
+                width: 100px;
+                margin-left: 20px;
+            }
         }
+        &__close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            &:hover {
+                transform: rotate(90deg);
+                transition: all .5s ease; 
+            }
+        }
+    }
+    &__modalOverlay {
+        background: black;
+        opacity: .7;
+        width: 100vw;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom:0;
+        right: 0;
     }
 }
