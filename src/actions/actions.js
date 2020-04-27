@@ -28,5 +28,16 @@ export const actions = {
         return {
             type: types.CALC_VISIBLE
         }
+    },
+    calcClicked(){
+        return{
+            type: types.CALC_ISCLICKED,
+        }
+    },
+    calcOnChange(value){
+        return{
+            type: types.CALC_ONCHANGE,
+            payload: value
+        }
     }
  }
