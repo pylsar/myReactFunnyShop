@@ -23,5 +23,10 @@ export const actions = {
         return{
             type: types.AUTH_FORM_REGESTERD
         }
+    },
+    calcToggle(){
+        return {
+            type: types.CALC_VISIBLE
+        }
     }
  }
