@@ -10,6 +10,10 @@ class CommentInput extends React.Component {
     event.preventDefault()
   };
   handleClick = () => {
+    // пустой коммент не отправляем
+    if(!this.state.comment.trim()){
+      return null
+    }
     //добавляем коммент
     this.props.addComment(this.state.comment)
     // обнуляем инпут после отправки
@@ -20,7 +24,6 @@ class CommentInput extends React.Component {
 
   getComment(event) {
     this.setState({
-      // comment: e.target.value
       [event.target.name]: event.target.value
     })
   }

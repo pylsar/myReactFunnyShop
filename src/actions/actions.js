@@ -37,7 +37,7 @@ export const actions = {
     calcOnChange(value){
         return{
             type: types.CALC_ONCHANGE,
-            payload: value
+            payload: value  // обязательно
         }
     }
  }

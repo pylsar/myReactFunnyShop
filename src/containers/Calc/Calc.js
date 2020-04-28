@@ -7,37 +7,7 @@ import closeIcon from '../../assets/img/close.svg'
 import { actions } from '../../actions/actions'
 
 class Calc extends React.Component {
-  // state = {
-    // value: '',
-    // result: '',
-    // isClicked: false,
-    // isVisibleCalc: false
-  // }
 
-  // handleChange = event => {
-  //   this.setState({
-  //     value: event.target.value
-  //   })
-  // }
-
-  // handleCalcVisible = () => {
-  //     this.setState({
-  //         isVisibleCalc: !this.state.isVisibleCalc
-  //     })
-  // }
-
-  // handleCalculate = () => {
-  //   this.setState({
-  //     result: this.state.value * 8.5,
-  //     isClicked: true
-  //   })
-  // }
-
-  // handleCalcToggle = () => {
-  //   this.setState({
-  //     isVisibleCalc: false
-  //   })
-  // }
   render() {
     return (
       <div className="calc">
