@@ -1,0 +1,9 @@
+.comments {
+    width: 40vw;
+    border: 1px solid red;
+    &__text{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+}

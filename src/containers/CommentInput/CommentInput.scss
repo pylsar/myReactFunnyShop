@@ -1,0 +1,22 @@
+@import '../../settings.scss'; // ; ставить обязательно
+
+.commentInput{
+    width: 90%;
+    margin: 20px auto;
+    &__box {
+        @include flexbox;
+        @include flex-direction(column); 
+        &--label {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    &__btn{
+        margin-top: 5px;
+        padding: 5px 30px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+}

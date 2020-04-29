@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from 'prop-types'
 
+import './CommentInput.scss'
+
 class CommentInput extends React.Component {
   state = {
     comment: ""
@@ -30,10 +32,10 @@ class CommentInput extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="commentInput">
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="text">Комментарий</label>
+          <div className="commentInput__box">
+            <label className="commentInput__box--label" htmlFor="text">Комментарий</label>
             <textarea
               name="comment"
               value={this.state.comment}
@@ -44,7 +46,7 @@ class CommentInput extends React.Component {
               onChange={event => this.getComment(event)}
             />
           </div>
-          <button onClick={this.handleClick}>Send</button>
+          <button className="commentInput__btn" onClick={this.handleClick}>Send</button>
         </form>
       </div>
     )

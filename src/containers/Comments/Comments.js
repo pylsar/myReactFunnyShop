@@ -23,10 +23,10 @@ class Comments extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="comments">
         <CommentInput addComment={this.addComment} />
         {this.state.isNotCommented ? (
-          <p>Вы будете первым кто оставит комментарий</p>
+          <p className="comments__text">Вы будете первым кто оставит комментарий</p>
         ) : (
           <CommentList comments={this.state.comments} />
         )}
