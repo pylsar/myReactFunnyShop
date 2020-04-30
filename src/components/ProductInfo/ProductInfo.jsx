@@ -7,6 +7,7 @@ import Comments from '../../containers/Comments/Comments'
 import './ProductInfo.scss'
 
 const ProductInfo = ({product, handleAddToCart, productInCart }) => {
+
     return (
         <div className="productInfo">
             <div className="productInfo__left">
@@ -15,7 +16,10 @@ const ProductInfo = ({product, handleAddToCart, productInCart }) => {
                     <img src={require(`../../assets/img/${product.img}`)} alt={product.title}/>
                 </div>
                 <span>Цена: {product.price} {product.currency}</span>
-                <span>Кол-во: {product.quantity}</span>
+                {/* если товар в корзине то убавляем кол-во */}
+                {
+                productInCart ? <span>Кол-во: {product.quantity -1}</span> : <span>Кол-во: {product.quantity}</span>
+                }
                 <div className="productInfo__left__descr">{product.longDescr}</div>
                 <Link to='/products' className="productInfo__left--link">назад</Link>
                 {

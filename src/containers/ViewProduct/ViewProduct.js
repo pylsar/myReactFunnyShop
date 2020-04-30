@@ -14,7 +14,7 @@ class ViewProduct extends React.Component {
     state={
         isLoading: true,
         product: {},
-        productInCart: false,
+        productInCart: false, 
         cartItems: []
     }
 
@@ -38,9 +38,10 @@ class ViewProduct extends React.Component {
         this.setState({
             productInCart: true
           });
+          
           // добавляем товар в массив корзины
           if (!this.state.productInCart) {
-            this.state.cartItems.push({ ...product, countCartItems: 1 });
+            this.state.cartItems.push({ ...product, countCartItems: 1 })
           }
       };
 
