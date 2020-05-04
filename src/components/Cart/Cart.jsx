@@ -16,9 +16,10 @@ const Cart = ({ cartItems, product, handleRemoveFromCart, handleIsVisibleCart, i
                     {cartItems.length !== 0 && product.title}
                     { cartItems.length !== 0 && <span className="cart__product--close" onClick={handleRemoveFromCart}>&times;</span> }
                 </div>
-                <div className="cart__icon">
-                    <img src={cartIcon} alt='cart' onClick={handleIsVisibleCart}/>
-                </div>
+                
+            </div>
+            <div className={!isVisibleCart ? 'cart__icon' : 'cart__icon cart__icon__active'}>
+                <img src={cartIcon} alt='cart' onClick={handleIsVisibleCart}/>
             </div>
         </Fragment>
     )
