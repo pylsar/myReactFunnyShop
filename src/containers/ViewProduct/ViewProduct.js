@@ -15,7 +15,8 @@ class ViewProduct extends React.Component {
         isLoading: true,
         product: {},
         productInCart: false, 
-        cartItems: []
+        cartItems: [],
+        isVisibleCart: false
     }
 
 
@@ -56,6 +57,12 @@ class ViewProduct extends React.Component {
         } 
     }
 
+    handleIsVisibleCart = () => {
+        this.setState({
+            isVisibleCart: !this.state.isVisibleCart
+        })
+    }
+
 
     render(){
         return (
@@ -67,10 +74,10 @@ class ViewProduct extends React.Component {
                         <Loader />
                     </Fragment>
                     :
-                    <Fragment>
-                        <Cart cartItems={this.state.cartItems} product={this.state.product} handleRemoveFromCart={this.handleRemoveFromCart}/>
-                        <ProductInfo product={this.state.product} handleAddToCart={this.handleAddToCart} productInCart={this.state.productInCart} handleRemoveFromCart={this.handleRemoveFromCart}/>
-                    </Fragment>
+                    <div className="viewProduct__box">
+                        <ProductInfo product={this.state.product} handleAddToCart={this.handleAddToCart} productInCart={this.state.productInCart} handleRemoveFromCart={this.handleRemoveFromCart} />
+                        <Cart cartItems={this.state.cartItems} product={this.state.product} handleRemoveFromCart={this.handleRemoveFromCart} handleIsVisibleCart={this.handleIsVisibleCart} isVisibleCart={this.state.isVisibleCart}/>
+                    </div>
                 }
           
             </div>

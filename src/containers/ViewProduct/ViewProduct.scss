@@ -1,3 +1,8 @@
+@import '../../settings.scss';
+
 .viewProduct {
     min-height: calc(100vh - 140px);
+    &__box{
+        @include flexbox;
+    }
 }

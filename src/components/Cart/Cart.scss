@@ -1,13 +1,45 @@
+@import '../../settings.scss';
+
 .cart {
-    width: 30vw;
-    height: 50px;
+    width: 0px;
+    min-height: calc(100vh - 140px);
     background: green;
+    position: relative;
     &__product {
-        display: flex;
-        align-items: center;
+        @include flexbox;
+        @include align-items(center);
         &--close {
             margin-left: 20px;
             font-size: 30px;
+            color: $warning;
+            cursor: pointer;
+            &:hover {
+                transform: rotate(90deg);
+                transition: all .5s ease-in;
+            }
         }
     }
+    &__icon {
+        width: 60px;
+        height: 50px;
+        border: 1px solid red;
+        position: absolute;
+        top: 0;
+        left: -60px;
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        & img {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+    &__active {
+        width: 30vw;
+        min-height: calc(100vh - 140px);
+        padding: 20px 10px;
+        background: green;
+        position: relative;
+    }
 }
+

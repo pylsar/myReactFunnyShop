@@ -22,7 +22,7 @@
         transform: translate(-50%,-50%);
         z-index: 100;
         &__box {
-            border: 1px solid red;
+            border: 1px solid $warning;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -34,11 +34,11 @@
                 border: 2px solid skyblue;
                 padding-left: 10px;
                 &--error{
-                    border: 2px solid red;
+                    border: 2px solid $warning;
                 }
             }
             &--error{
-                color: red;
+                color: $warning;
             }
         }
     }
