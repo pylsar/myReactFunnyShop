@@ -37,14 +37,24 @@ class ViewProduct extends React.Component {
     handleAddToCart = (product) => {
         this.setState({
             productInCart: true
-          });
+          })
           
-          // добавляем товар в массив корзины
-          if (!this.state.productInCart) {
+        // добавляем товар в массив корзины
+        if (!this.state.productInCart) {
             this.state.cartItems.push({ ...product, countCartItems: 1 })
-          }
-      };
+        } 
+      }
 
+    handleRemoveFromCart = (product) => {
+        this.setState({
+            productInCart: false
+        })
+
+        //удаляем товар из масива корзины
+        if (this.state.productInCart) {
+            this.state.cartItems.pop({ ...product, countCartItems: 1 })
+        } 
+    }
 
 
     render(){
@@ -58,8 +68,8 @@ class ViewProduct extends React.Component {
                     </Fragment>
                     :
                     <Fragment>
-                        <Cart cartItems={this.state.cartItems} product={this.state.product}/>
-                        <ProductInfo product={this.state.product} handleAddToCart={this.handleAddToCart} productInCart={this.state.productInCart} />
+                        <Cart cartItems={this.state.cartItems} product={this.state.product} handleRemoveFromCart={this.handleRemoveFromCart}/>
+                        <ProductInfo product={this.state.product} handleAddToCart={this.handleAddToCart} productInCart={this.state.productInCart} handleRemoveFromCart={this.handleRemoveFromCart}/>
                     </Fragment>
                 }
           

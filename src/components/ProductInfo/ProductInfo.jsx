@@ -6,7 +6,7 @@ import Comments from '../../containers/Comments/Comments'
 
 import './ProductInfo.scss'
 
-const ProductInfo = ({product, handleAddToCart, productInCart }) => {
+const ProductInfo = ({product, handleAddToCart, productInCart, handleRemoveFromCart }) => {
 
     return (
         <div className="productInfo">
@@ -17,14 +17,10 @@ const ProductInfo = ({product, handleAddToCart, productInCart }) => {
                 </div>
                 <span>Цена: {product.price} {product.currency}</span>
                 {/* если товар в корзине то убавляем кол-во */}
-                {
-                productInCart ? <span>Кол-во: {product.quantity -1}</span> : <span>Кол-во: {product.quantity}</span>
-                }
+                { productInCart ? <span>Кол-во: {product.quantity -1}</span> : <span>Кол-во: {product.quantity}</span> }
                 <div className="productInfo__left__descr">{product.longDescr}</div>
                 <Link to='/products' className="productInfo__left--link">назад</Link>
-                {
-                productInCart ? <button>Убрать из карзины</button> : <button onClick={handleAddToCart}>Добавить в корзину</button>
-                }
+                { productInCart ? <button onClick={handleRemoveFromCart}>Убрать из карзины</button> : <button onClick={handleAddToCart}>Добавить в корзину</button> }
             </div>
             <Comments />
         </div>

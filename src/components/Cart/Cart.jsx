@@ -2,16 +2,19 @@ import React from 'react'
 
 import './Cart.scss'
 
-const Cart = ({ cartItems, product }) => {
+const Cart = ({ cartItems, product, handleRemoveFromCart }) => {
     
     return (
         <div className="cart">
             {/* начальное положение, когда товаров нет */}
-            {cartItems.length === 0 ? 'товар еще не добавлен' : <div>У вас выбран {cartItems.length} товар</div>}
+            {cartItems.length === 0 ? 'товар еще не добавлен' : <div>Товаров вырано: {cartItems.length}</div>}
             {/* если товар выбран, добавляем его название в корзину */}
-            <div>
-                 {cartItems.length !== 0 && product.title}
-                 
+            <div className="cart__product">
+                {cartItems.length !== 0 && product.title}
+                {
+                    cartItems.length !== 0 && <span className="cart__product--close" onClick={handleRemoveFromCart}>&times;</span>
+                }
+                  
             </div>
         </div>
     )
