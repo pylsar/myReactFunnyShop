@@ -20,7 +20,8 @@ class ViewProduct extends React.Component {
     }
 
 
-    componentDidMount(){
+
+    componentDidMount(){     
         // console.log(this.props)
         // взяли из консоли
         const {id} = this.props.match.params
@@ -44,7 +45,7 @@ class ViewProduct extends React.Component {
         if (!this.state.productInCart) {
             this.state.cartItems.push({ ...product, countCartItems: 1 })
         } 
-      }
+    }
 
     handleRemoveFromCart = (product) => {
         this.setState({
