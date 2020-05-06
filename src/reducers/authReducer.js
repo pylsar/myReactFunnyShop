@@ -3,6 +3,7 @@ import { AUTH_FORM_VISIBLE, AUTH_FORM_REGESTERD } from '../types/types'
 const initialState = {
     isVisible: false,
     isRegestered: false,
+    isPersonal: false,
     // firstname: '',
     // lastname: '',
     // email: '',
@@ -27,7 +28,8 @@ export function authReducer(state = initialState, action){
                 ...state, // надо обязательно, (при повторном клике на ник(после регистрации) - ник не пропадает)
                 initialState: initialState, // очищаем если норм
                 isRegestered: true, // для имени в углу экрана
-                isVisible: false // закрываем если рега норм прошла
+                isVisible: false, // закрываем если рега норм прошла
+                isPersonal: true // меняем состояние если рега прошла 
             }
         }
         default: 
