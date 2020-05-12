@@ -19,8 +19,6 @@ class ViewProduct extends React.Component {
         isVisibleCart: false
     }
 
-
-
     componentDidMount(){     
         // console.log(this.props)
         // взяли из консоли
@@ -52,7 +50,7 @@ class ViewProduct extends React.Component {
             productInCart: false
         })
 
-        //удаляем товар из масива корзины
+        //удаляем товар из массива корзины
         if (this.state.productInCart) {
             this.state.cartItems.pop({ ...product, countCartItems: 1 })
         } 
@@ -63,7 +61,6 @@ class ViewProduct extends React.Component {
             isVisibleCart: !this.state.isVisibleCart
         })
     }
-
 
     render(){
         return (
@@ -80,7 +77,6 @@ class ViewProduct extends React.Component {
                         <Cart cartItems={this.state.cartItems} product={this.state.product} handleRemoveFromCart={this.handleRemoveFromCart} handleIsVisibleCart={this.handleIsVisibleCart} isVisibleCart={this.state.isVisibleCart}/>
                     </div>
                 }
-          
             </div>
         )
     }

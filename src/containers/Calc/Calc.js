@@ -21,7 +21,7 @@ class Calc extends React.Component {
               <div className="calc__box__main">
                   <label htmlFor="tug">Тугрики</label>
                   <input id="tug" onChange={event => this.props.onCalcOnChange(event.target.value)} type="number" min="0" value={this.props.valueInput}/>
-                  <button onClick={this.props.oncalcClicked}>click</button>
+                  <button onClick={this.props.oncalcClicked}>расчитать</button>
               </div>
               {this.props.valueInput === '' 
               ? '' 

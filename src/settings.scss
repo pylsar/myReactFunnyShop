@@ -1,13 +1,13 @@
 // переменные
 $mainText: black; // цвет основного текста
 $mainLink: black; // цвет ссылок
-$mainLinkHover: white;
+$mainLinkHover: white; // цвет ссылок при наведении
 $border: black; // цвет границ
 $warning: red; // цвет ошибок и закрытие кнопки в корзине
 
-$mainBg: linear-gradient(90deg, #aea4e3, #d3ffe8); // цвет контента
-$secondaryBg: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); // цвет футера и хэдера
-$button: linear-gradient(to top left, powderblue, pink); // цвет кнопок
+$mainBg: skyblue; // цвет контента
+$secondaryBg: #786e6e; // цвет футера и хэдера
+$button: #786e6e; // цвет кнопок
 $thirdBg: lightgray; // цвет авторизации, боди, комментарии, калькулятор 
 $different: #8ff7c0; // цвет поиска
 

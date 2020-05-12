@@ -90,56 +90,64 @@ class Auth extends React.Component {
                             <h3>Авторизация</h3>
                             <img src={closeIcon} alt="closeBtn" onClick={this.props.onModalToggle} />
                             <form onSubmit={this.handleSubmit} className="auth__form__box">
-                                <div>
-                                    <label htmlFor="firstname">Имя</label>
-                                    <input 
-                                    className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
-                                    type="text" 
-                                    id="firstname"
-                                    onChange={this.handleChange}
-                                    name="firstname"
-                                    value={this.state.value}
-                                    placeholder="firstname"
-                                    />
+                                <div className="auth__form__box__flex">
+                                    <div>
+                                        <label htmlFor="firstname">Имя</label>
+                                        <input 
+                                        className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
+                                        type="text" 
+                                        id="firstname"
+                                        onChange={this.handleChange}
+                                        name="firstname"
+                                        value={this.state.value}
+                                        placeholder="firstname"
+                                        />
+                                    </div>    
                                     <div className="auth__form__box--error">{this.state.firstnameError}</div>
                                 </div>
-                                <div>
-                                    <label htmlFor="lastname">Фамилия</label>
-                                    <input 
-                                    className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
-                                    type="text"
-                                    id="lastname"
-                                    onChange={this.handleChange}
-                                    name="lastname"
-                                    value={this.state.value}
-                                    placeholder="lastname"
-                                    />
+                                <div className="auth__form__box__flex">
+                                    <div>
+                                        <label htmlFor="lastname">Фамилия</label>
+                                        <input 
+                                        className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
+                                        type="text"
+                                        id="lastname"
+                                        onChange={this.handleChange}
+                                        name="lastname"
+                                        value={this.state.value}
+                                        placeholder="lastname"
+                                        />
+                                    </div>    
                                     <div className="auth__form__box--error">{this.state.lastnameError}</div>
                                 </div>
-                                <div>
-                                    <label htmlFor="email">Email</label>
-                                    <input 
-                                    className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
-                                    type="text"
-                                    id="email"
-                                    onChange={this.handleChange}
-                                    name="email"
-                                    value={this.state.value}
-                                    placeholder="email"
-                                    />
+                                <div className="auth__form__box__flex">
+                                    <div>
+                                        <label htmlFor="email">Email</label>
+                                        <input 
+                                        className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
+                                        type="text"
+                                        id="email"
+                                        onChange={this.handleChange}
+                                        name="email"
+                                        value={this.state.value}
+                                        placeholder="email"
+                                        />
+                                    </div>    
                                     <div className="auth__form__box--error">{this.state.emailError}</div>
                                 </div>
-                                <div>
-                                    <label htmlFor="password">Пароль</label>
-                                    <input 
-                                    className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
-                                    type="password" 
-                                    id="password" 
-                                    onChange={this.handleChange} 
-                                    name="password" 
-                                    value={this.state.value} 
-                                    placeholder="password"
-                                    />
+                                <div className="auth__form__box__flex">
+                                    <div>
+                                        <label htmlFor="password">Пароль</label>
+                                        <input 
+                                        className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
+                                        type="password" 
+                                        id="password" 
+                                        onChange={this.handleChange} 
+                                        name="password" 
+                                        value={this.state.value} 
+                                        placeholder="password"
+                                        />
+                                    </div>    
                                     <div className="auth__form__box--error">{this.state.passwordError}</div>
                                 </div>
                                 <button type="submit" onClick={this.handleSubmit}>Авторизоваться</button>
@@ -147,7 +155,7 @@ class Auth extends React.Component {
                         </Fragment>
                     : 
                         <Fragment>
-                            <h3>Персональная страница</h3>
+                            <h3>Личный кабинет</h3>
                             <img src={closeIcon} alt="closeBtn" onClick={this.props.onModalToggle} />
                             <PersonalPage firstname={this.state.firstname}/> 
                         </Fragment>    

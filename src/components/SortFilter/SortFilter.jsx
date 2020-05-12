@@ -11,7 +11,7 @@ class SortFilter extends React.Component {
             <label>
                 Сортировать по цене: 
                 <select value={this.props.sort} onChange={this.props.handleSort}>
-                    <option value="">{!this.props.sort ? 'сортировать по:' : 'вернуть как было'}</option>
+                    <option value="">{!this.props.sort ? 'сортировать по' : 'вернуть как было'}</option>
                     <option value="expensive">ого как дорого</option>
                     <option value="cheap">дешманские</option>
                 </select>

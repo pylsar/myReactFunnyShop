@@ -20,7 +20,7 @@ const ProductInfo = ({product, handleAddToCart, productInCart, handleRemoveFromC
                 { productInCart ? <span>Кол-во: {product.quantity -1}</span> : <span>Кол-во: {product.quantity}</span> }
                 <div className="productInfo__left__descr">{product.longDescr}</div>
                 <Link to='/products' className="productInfo__left--link">назад</Link>
-                { productInCart ? <button onClick={handleRemoveFromCart}>Убрать из карзины</button> : <button onClick={handleAddToCart}>Добавить в корзину</button> }
+                { productInCart ? <button className="productInfo__left__btn" onClick={handleRemoveFromCart}>Убрать из карзины</button> : <button className="productInfo__left__btn" onClick={handleAddToCart}>Добавить в корзину</button> }
             </div>
             <Comments />
         </div>

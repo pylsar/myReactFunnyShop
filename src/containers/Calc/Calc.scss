@@ -7,7 +7,7 @@
     }
     &__box{
         @include flexbox;
-        @include justify-content(center);
+        // @include justify-content(center);
         @include align-items(center);
         @include flex-direction(column);
         width: 300px;
@@ -19,10 +19,22 @@
         transform: translate(-50%,-50%);
         z-index: 100;
         &__main{
-            margin-bottom: 30px;
+            margin-top: 135px; 
+            margin-bottom: 10px;
             & input {
                 width: 100px;
                 margin-left: 20px;
+                height: 30px;
+                border: none;
+                outline: none;
+            }
+            & button {
+                height: 30px;
+                border: none;
+                outline: none;
+                background: $button;
+                padding: 0 5px;
+                cursor: pointer;
             }
         }
         &__close {

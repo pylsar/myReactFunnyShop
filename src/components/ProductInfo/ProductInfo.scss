@@ -29,15 +29,28 @@
         &__descr {
             width: 350px;
             margin: 20px;
+            padding-right: 5px;
+        }
+        &--link, &__btn{
+            background: $button;
+            height: 40px;
+            text-align: center;
+            line-height: 2;
+            font-size: 20px;
+            color: $mainLink;
+            font-family: 'Times New Roman', Times, serif;
         }
         &--link {
             display: inline-block;
-            background: $button;
-            padding: 10px 20px;
+            width: 80px;
             margin: 20px;
-            font-size: 20px;
             text-decoration: none;
-            color: $mainLink;
+        }
+        &__btn {
+            outline: none;
+            border: none;
+            cursor: pointer;
+            width: 220px;
         }
     }
    

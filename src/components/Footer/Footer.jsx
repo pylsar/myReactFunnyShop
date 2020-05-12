@@ -16,7 +16,7 @@ const Footer = () => {
                     <a href="https://github.com/pylsar" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </li>
                 <li>
-                    <a href="www.codewars.com/users/pylsar" target="_blank" rel="noopener noreferrer">CodeWars</a>
+                    <a href="https://codewars.com/users/pylsar" target="_blank" rel="noopener noreferrer">CodeWars</a>
                 </li>
             </ul>
         </footer>

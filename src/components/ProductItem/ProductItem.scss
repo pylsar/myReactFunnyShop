@@ -34,10 +34,15 @@
         font-size: 20px;
         font-weight: bold;
         color: $mainLink;
+        padding-bottom: 10px;
         text-decoration: none;
+        border-bottom: 1px solid $mainBg;
         &:hover{
-            text-decoration: underline;
+            // text-decoration: underline;
             color: $mainLinkHover;
+            border-bottom: 1px solid $mainLinkHover;
+            padding-bottom: 0px;
+            transition: padding-bottom .4s ease-in;
         }
     }
     & h3 {
