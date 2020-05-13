@@ -1,18 +1,27 @@
+@import '../../settings.scss';
+
 .like{
-    display: flex;
+    @include flexbox;
     &__plus, &__minus, &__result {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
       width: 20px;
       height: 20px;
     }
     &__plus, &__minus{
       cursor: pointer;
+      & img {
+        width: 20px;
+      }
+    }
+    &__minus{
+      transform: rotate(180deg);
     }
     &__result{
       &--red{
         color: red;
       }
     }
+
   }

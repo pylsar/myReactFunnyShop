@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 
 
 import { actions } from '../../actions/actions'
-
+import likeIcon from '../../assets/img/likeUp.png'
+ 
 import "./Like.scss"
 
 class Like extends React.Component {
@@ -12,9 +13,7 @@ class Like extends React.Component {
   render() {
     return (
       <div className="like">
-        <span className="like__plus" onClick={this.props.onlikeChangedIncrement}>
-          +
-        </span>
+        <img src={likeIcon} alt='нравится' className="like__plus" onClick={this.props.onlikeChangedIncrement}/>
           {this.props.like < 0 ? (
           <span className="like__result like__result--red">
             {this.props.like}
@@ -22,9 +21,7 @@ class Like extends React.Component {
         ) : (
           <span className="like__result">{this.props.like}</span>
         )}
-        <span className="like__minus" onClick={this.props.onlikeChangedDecrement}>
-          -
-        </span>
+        <img src={likeIcon} alt="не нравится" className="like__minus" onClick={this.props.onlikeChangedDecrement}/>
       </div>
     )
   }

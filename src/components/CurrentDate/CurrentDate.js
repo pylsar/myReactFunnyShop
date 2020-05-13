@@ -1,5 +1,7 @@
 import React from "react"
 
+import './CurrentDate.scss'
+
 const CurrentDate = () => {
   let newDate = new Date()
   let date = newDate.getDate()
@@ -8,7 +10,7 @@ const CurrentDate = () => {
 
   const currentDay = `${date.toString()}.${month.toString()}.${year.toString()}`
   return (
-    <div>
+    <div className="currentDate">
       <span>{currentDay}</span>
     </div>
   )

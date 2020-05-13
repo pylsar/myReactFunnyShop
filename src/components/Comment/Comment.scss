@@ -5,7 +5,6 @@
       @include flexbox;
       @include boxShadow;
       width: 100%;
-      border: 1px solid red;
       margin-top: 10px;
       margin-bottom: 5px;
       background: $thirdBg;
@@ -14,14 +13,12 @@
         @include justify-content(center);
         @include align-items(center);
         width: 50px;
-        border: 1px solid blue;
         & img {
           width: 100%;
         }
       }
       &__text {
         flex: 1;
-        border: 1px solid green;
         padding-left: 10px;
       }
       &__bottom {
