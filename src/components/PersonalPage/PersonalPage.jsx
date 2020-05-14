@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const PersonalPage = ({ firstname }) => {
     return (
@@ -7,5 +8,9 @@ const PersonalPage = ({ firstname }) => {
         </div>
     )
 }
+
+PersonalPage.propTypes = {
+    firstname: PropTypes.string.isRequired,
+  }
 
 export default PersonalPage

@@ -28,7 +28,10 @@ const ProductInfo = ({product, handleAddToCart, productInCart, handleRemoveFromC
 }
 
 ProductInfo.propTypes = {
-    product: PropTypes.object.isRequired
+    product: PropTypes.object.isRequired,
+    handleAddToCart: PropTypes.func.isRequired, 
+    productInCart: PropTypes.bool.isRequired, 
+    handleRemoveFromCart: PropTypes.func.isRequired
 }
 
 export default ProductInfo

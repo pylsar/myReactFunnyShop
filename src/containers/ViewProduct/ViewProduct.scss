@@ -2,6 +2,10 @@
 
 .viewProduct {
     min-height: calc(100vh - 140px);
+    & h2 {
+        text-align: center;
+        padding-top: 30px;
+    }
     &__box{
         @include flexbox;
     }

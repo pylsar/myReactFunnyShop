@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 import Comment from '../Comment/Comment'
 
-const CommentList = props => {
+const CommentList = ({ comments}) => {
   return (
     <div>
       {/* счетчик кол-ва сообщений */}
-      <span>Количество комментариев: {props.comments.length}</span>
+      <span>Количество комментариев: {comments.length}</span>
 
       {/* выводим сообщения циклом */}
-      {props.comments.map((comment, index) => (
+      {comments.map((comment, index) => (
         <Comment key={index} comment={comment} />
       ))}
     </div>

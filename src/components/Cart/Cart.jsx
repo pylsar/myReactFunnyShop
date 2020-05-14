@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 import './Cart.scss'
 import cartIcon from '../../assets/img/cart.png'
@@ -24,5 +25,13 @@ const Cart = ({ cartItems, product, handleRemoveFromCart, handleIsVisibleCart, i
         </Fragment>
     )
 }
+
+Cart.propTypes = {
+    cartItems: PropTypes.array.isRequired,
+    product: PropTypes.object.isRequired,
+    handleRemoveFromCart: PropTypes.func.isRequired,
+    handleIsVisibleCart: PropTypes.func.isRequired,
+    isVisibleCart: PropTypes.bool.isRequired
+  }
 
 export default Cart

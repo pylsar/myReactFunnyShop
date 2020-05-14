@@ -9,7 +9,7 @@ import "./Comment.scss"
 
 import commentIcon from '../../assets/img/commentIcon.jpg'
 
-const Comment = props => {
+const Comment = ({ comment }) => {
   return (
     <div className="comment">
       <div className="comment__box">
@@ -20,7 +20,7 @@ const Comment = props => {
           />
         </div>
         <div className="comment__box__text">
-          <p>{props.comment}</p>
+          <p>{comment}</p>
         </div>
       </div>
       <div className="comment__box__bottom">
