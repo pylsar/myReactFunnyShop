@@ -4,7 +4,7 @@
     @include flexbox;
     &__left {
         width: 30vw;
-        border-right: 1px solid gray;
+        border-right: 1px solid $border;
         & h3 {
             text-align: center;
             margin: 20px 0px;
@@ -31,7 +31,7 @@
             margin: 20px;
             padding-right: 5px;
         }
-        &--link, &__btn{
+        &--link{
             background: $button;
             height: 40px;
             text-align: center;
@@ -47,10 +47,7 @@
             text-decoration: none;
         }
         &__btn {
-            outline: none;
-            border: none;
-            cursor: pointer;
-            width: 220px;
+            @include btnBig;
         }
     }
    

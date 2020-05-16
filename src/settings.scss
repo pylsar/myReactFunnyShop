@@ -5,8 +5,8 @@ $mainLinkHover: white; // цвет ссылок при наведении
 $border: black; // цвет границ
 $warning: red; // цвет ошибок и закрытие кнопки в корзине
 
-$mainBg: skyblue; // цвет контента
-$secondaryBg: #621e82; // цвет футера и хэдера
+$mainBg: #3399cc; // цвет контента
+$secondaryBg: #27ae60; // цвет футера и хэдера
 $button: #786e6e; // цвет кнопок
 $thirdBg: lightgray; // цвет авторизации, боди, комментарии, калькулятор, карзина 
 $different: #8ff7c0; // цвет поиска
@@ -66,3 +66,16 @@ $different: #8ff7c0; // цвет поиска
   :-ms-input-placeholder      {@content}  
 }
 
+@mixin btnBig{
+  width: 220px;
+  height: 40px;
+  background-color: $button;
+  text-align: center;
+  line-height: 2;
+  font-size: 20px;
+  color: $mainLink;
+  font-family: 'Times New Roman', Times, serif;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

@@ -28,11 +28,15 @@
             @include justify-content(center);
             @include align-items(center);
             @include flex-direction(column);
-            border: 1px solid $warning;
             &__flex{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexbox;
+                @include justify-content(flex-start);
+                @include align-items(center);
+                width: 80%;
+                & label {
+                    display: inline-block;
+                    width: 70px;
+                }
             }
             &__input {
                 width: 25vw;
@@ -47,6 +51,9 @@
             &--error{
                 color: $warning;
             }
+        }
+        & button {
+            @include btnBig;
         }
     }
     & img {
@@ -71,6 +78,9 @@
         left: 0;
         bottom:0;
         right: 0;
+    }
+    & h3 {
+        padding-top: 30px;
     }
 }
 

@@ -11,16 +11,16 @@ class PersonalPage extends React.Component{
 
     handlePromocode = () =>{
         this.setState({
-            promocode: Math.random()
+            promocode: Math.round(Math.random()*6796785)
         })
         
     }
     render(){
         return (
             <div className="personalPage">
-                <p>Добро пожаловать в личный кабинет, {this.props.firstname}</p>
-                <button onClick={this.handlePromocode}>получить промокод</button>
-                <p>{this.state.promocode}</p>
+                <p className="personalPage__greeting">Добро пожаловать в личный кабинет, {this.props.firstname}</p>
+                <button className="personalPage__btn" onClick={this.handlePromocode}>получить промокод</button>
+                <p className="personalPage__promo">{this.state.promocode}</p>
             </div>
         )
     }
