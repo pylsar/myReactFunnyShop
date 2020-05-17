@@ -24,3 +24,17 @@
         width: 200px;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .home {
+        & h1 {
+            font-size: 30px;
+        }
+        &--link{
+            font-size: 60px;
+        } 
+    }
+}	
+
+	

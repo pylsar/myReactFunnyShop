@@ -3,9 +3,9 @@ import './Error404.scss'
 
 const Error404 = () => {
     return (
-        <div className="error">
+        <section className="error">
             <h2>Ашипка <span>404</span></h2>
-        </div>
+        </section>
     )
 }
 

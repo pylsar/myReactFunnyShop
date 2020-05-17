@@ -64,7 +64,7 @@ class ViewProduct extends React.Component {
 
     render(){
         return (
-            <div className="viewProduct">
+            <section className="viewProduct">
                 {
                     this.state.isLoading ?
                     <Fragment>
@@ -77,7 +77,7 @@ class ViewProduct extends React.Component {
                         <Cart cartItems={this.state.cartItems} product={this.state.product} handleRemoveFromCart={this.handleRemoveFromCart} handleIsVisibleCart={this.handleIsVisibleCart} isVisibleCart={this.state.isVisibleCart}/>
                     </div>
                 }
-            </div>
+            </section>
         )
     }
 }

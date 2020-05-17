@@ -51,7 +51,7 @@ class Products extends React.Component {
 
     render(){
         return(
-            <div className="products">
+            <section className="products">
                 <h1>Каталог Товаров</h1>
                 <SortFilter sort={this.state.sort} handleSort={this.handleSort.bind(this)} countProducts={this.state.products.length}/>
                 <div className="products__box">
@@ -67,7 +67,7 @@ class Products extends React.Component {
                             )
                         })}
                 </div>   
-            </div>
+            </section>
         )
     }
 }

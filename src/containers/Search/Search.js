@@ -41,7 +41,7 @@ class Search extends React.Component {
                 )
             })
         return (
-            <div className="search">
+            <section className="search">
                 <h2>Введите имя товара</h2>
                 <div className="search__place">
                     <div className="search__place__img">
@@ -57,7 +57,7 @@ class Search extends React.Component {
                 </div>    
                 {/* выводим карточку товара если не пустая строка поиска */}
                 {this.state.search && <div className="search__box">{filterSearch}</div> } 
-            </div> 
+            </section> 
         )
     }
 }

@@ -7,7 +7,7 @@ import './Home.scss'
 
 const Home = () => {
     return (
-        <div className="home">
+        <section className="home">
            <h1>Магазин крутых вещей</h1>
            <p className="home--subtitle"> <time dateTime="2020-01-01">Мы открылись!</time> и у нас можно купить все</p> 
            <small>(это вам не али экспресс какой-нибудь)</small>
@@ -15,8 +15,7 @@ const Home = () => {
                <Link to="/products" className="home--link">Каталог тут</Link>
            </p>
            <img src={cartIcon} alt="магазин"/>
-           
-        </div>
+        </section>
     )
 }
 

@@ -97,6 +97,7 @@ class Auth extends React.Component {
                                         className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
                                         type="text" 
                                         id="firstname"
+                                        maxLength = "10"
                                         onChange={this.handleChange}
                                         name="firstname"
                                         value={this.state.value}
@@ -112,6 +113,7 @@ class Auth extends React.Component {
                                         className={this.state.firstnameError ? 'auth__form__box__input auth__form__box__input--error': 'auth__form__box__input'}
                                         type="text"
                                         id="lastname"
+                                        maxLength = "10"
                                         onChange={this.handleChange}
                                         name="lastname"
                                         value={this.state.value}

@@ -14,3 +14,13 @@
         }
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .sortFilter{
+        @include flex-direction(column);
+        & p {
+            margin: 10px 0px;
+        }
+    }
+}

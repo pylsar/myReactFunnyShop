@@ -1,6 +1,7 @@
 @import '../../settings.scss';
 
 .products{
+    border: 1px solid red;
     & h1{
         color: $mainText;
         text-align: center ;
