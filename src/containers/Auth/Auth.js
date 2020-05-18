@@ -45,7 +45,7 @@ class Auth extends React.Component {
         }
     // поле password
         if (this.state.password.length < 10) {
-          passwordError = "должно быть не меньше 10 символов"
+          passwordError = "не менее 10 символов"
         }
     
         if (emailError || firstnameError || lastnameError|| passwordError) {

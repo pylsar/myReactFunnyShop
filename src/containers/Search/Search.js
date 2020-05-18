@@ -47,7 +47,7 @@ class Search extends React.Component {
                     <div className="search__place__img">
                         <img className="search__place__img--icon" src={SearchIcon} alt="search" />
                     </div>
-                    <input className="search__place--input" onChange={this.handleSearch} type="text" value={this.state.search} />
+                    <input className="search__place--input" onChange={this.handleSearch} type="text" value={this.state.search} maxLength='20' />
                 </div>
                 <div className="search__result">
                     {/* выводим текст поиска на экран */}

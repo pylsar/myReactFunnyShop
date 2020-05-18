@@ -17,7 +17,6 @@
     }
     &__form {
         width: 70vw;
-        height: 70vh;
         background: $thirdBg;
         position: absolute;
         top: 50%;
@@ -51,10 +50,12 @@
             }
             &--error{
                 color: $warning;
+                font-size: 12px;
             }
         }
         & button {
             @include btnBig;
+            margin-bottom: 30px;
         }
     }
     & img {
@@ -84,6 +85,33 @@
         padding-top: 30px;
     }
 }
+
+
+@media screen and (max-width: 960px) {
+   .auth {
+       &__form{
+           &__box{
+               &__input {
+                   width: 20vw;
+               }
+           }
+       }
+   } 
+}
+@media screen and (max-width: 768px) {
+    .auth {
+        &__form{
+            &__box{
+                &__input {
+                    width: 15vw;
+                }
+                &--error {
+                    font-size: 10px;
+                }
+            }
+        }
+    } 
+ }
 
 
 

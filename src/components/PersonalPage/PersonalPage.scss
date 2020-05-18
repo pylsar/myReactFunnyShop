@@ -4,11 +4,11 @@
     margin-top: 30px;
     text-align: center;
     &__btn {
-        margin-top: 20px;
         @include btnBig;
+        margin-top: 20px;
     }
     &__promo {
-        margin-top: 20px;
+        margin: 20px 0 40px;
         font-weight: bold;
         font-size: 40px;
     }

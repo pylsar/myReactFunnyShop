@@ -2,6 +2,7 @@
 
 .productInfo{
     @include flexbox;
+    min-height: calc(100vh - 140px);
     &__left {
         width: 30vw;
         border-right: 1px solid $border;
@@ -52,3 +53,37 @@
     }
    
 }
+
+@media screen and (max-width: 1200px) {
+    .productInfo {
+        &__left{
+            &__img {
+                width: 280px;
+                height: 190px;
+            }
+            &__descr {
+                width: 280px;
+            }
+            &__btn {
+                width: 200px;
+            }
+            &--link {
+                width: 60px;
+                margin: 10px;
+            }
+        }
+    } 
+ }
+
+ @media screen and (max-width: 980px) {
+    .productInfo {
+        @include flex-direction(column);
+        width: 90vw;
+        &__left {
+            width: 40vw;
+            margin: 0 auto;
+            border-right: none;
+        }
+    } 
+ }
+
