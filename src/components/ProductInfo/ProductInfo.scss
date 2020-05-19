@@ -80,9 +80,26 @@
         @include flex-direction(column);
         width: 90vw;
         &__left {
-            width: 40vw;
-            margin: 0 auto;
+            width: 100%;
             border-right: none;
+            border: 1px solid red;
+            &__mobile {
+                @include flexbox;
+            }
+        }
+    } 
+ }
+
+ @media screen and (max-width: 600px) {
+    .productInfo {
+        &__left {
+            &__mobile{
+                @include flex-direction(column);
+                &__content{
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
         }
     } 
  }
